@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>Maná</title>
+  <link rel="stylesheet" href="./perfil.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="header">
+   <i class="fas fa-bars menu-icon"></i>
+   <div class="logo">
+    <a href="LandingPage.html">MANÁ</a>
+   </div>
+   <div>
+    <i class="fas fa-search search-icon"></i>
+   </div>
+  </div>
+  
+  <div class="container">
+    <div class="sidebar">
+      <img alt="User profile picture" height="100" src="profile.jpg" width="100"/>
+      <div class="user-info">
+        <!-- Hacer los campos editables -->
+        <input type="text" id="user-name" placeholder="UserName">
+        <input type="email" id="user-email" placeholder="Email">
+        <input type="number" id="user-age" placeholder="Age">
+        <input type="text" id="user-profession" placeholder="Profession">
+      </div>
+      <div class="buttons">
+        <a href="web1.html">
+          My bag
+          <i class="fas fa-shopping-bag"></i>
+        </a>
+        <a>
+          Privacy
+          <i class="fas fa-lock"></i>
+        </a>
+        <a>
+          Delete account
+          <i class="fas fa-trash"></i>
+        </a>
+        <!-- Botón de guardar cambios -->
+        <button id="save-btn">Save Changes</button>
+        <!-- Botón de cerrar sesión -->
+        <a href="#" id="logout-btn">
+          Logout
+          <i class="fas fa-sign-out-alt"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./components/profile.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+/* Reset de márgenes y bordes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Texto oscuro para contraste */
+}
+
+/* Estilo para el encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #000; /* Fondo negro para el header */
+    color: #fff; /* Texto blanco */
+    border-bottom: 2px solid #444; /* Borde sutil */
+    max-width: 1200px;
+    margin: 0 auto; /* Centrar el header */
+}
+
+/* Iconos en el encabezado */
+.header .menu-icon, .header .search-icon, .header .cart-icon {
+    font-size: 24px;
+}
+
+/* Logo en el encabezado */
+.header .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Contenedor principal centrado */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background-color: #fff; /* Fondo blanco para el contenedor */
+    max-width: 1200px; /* Ancho máximo para el contenedor */
+    margin: 40px auto; /* Centrar el contenedor */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Barra lateral con fondo negro */
+.sidebar {
+    width: 300px; /* Hacer la barra lateral más ancha */
+    background-color: #000; /* Fondo negro para la barra lateral */
+    color: #fff; /* Texto blanco */
+    padding: 30px;
+    border-radius: 15px;
+    margin-right: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen de perfil en la barra lateral */
+.sidebar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Estilo para los campos de información del usuario */
+.sidebar .user-info {
+    margin-bottom: 30px;
+}
+
+.sidebar .user-info div {
+    margin-bottom: 15px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Estilo para los inputs */
+.user-info input {
+    padding: 12px;
+    background-color: #222; /* Fondo oscuro para inputs */
+    color: #fff; /* Texto blanco */
+    border: 2px solid #444; /* Borde sutil */
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto en los inputs al hacer foco */
+.user-info input:focus {
+    border-color: #fff; /* Borde blanco cuando el input está en foco */
+    background-color: #444; /* Fondo gris oscuro en foco */
+    color: #fff; /* Mantener texto blanco */
+}
+
+/* Estilo de los botones en la barra lateral */
+.sidebar .buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .buttons a,
+.sidebar .buttons button {
+    background-color: #444; /* Fondo gris oscuro para botones */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 14px 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover para los botones */
+.sidebar .buttons a:hover,
+.sidebar .buttons button:hover {
+    background-color: #555; /* Fondo más claro en hover */
+    transform: translateY(-3px); /* Pequeña animación de elevación */
+}
+
+/* Botón de logout con fondo gris */
+#logout-btn {
+    background-color: #555; /* Gris oscuro para el logout */
+}
+
+#logout-btn:hover {
+    background-color: #666; /* Cambio de color en hover */
+}
+
+/* Contenido principal que muestra los productos */
+.main-content {
+    flex-grow: 1;
+    padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Estilos para cada producto */
+.product {
+    width: 250px; /* Ancho de los productos */
+    height: 300px;
+    margin: 15px;
+    position: relative;
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen dentro del producto */
+.product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover en la imagen del producto */
+.product img:hover {
+    filter: grayscale(100%); /* Imagen en blanco y negro al hacer hover */
+    transform: scale(1.1);
+}
+
+/* Estado del producto (si está agotado o similar) */
+.product .status {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* Texto blanco */
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Descripción del producto */
+.product .description {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Contenedor de productos favoritos */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+/* Mensaje cuando no hay productos favoritos */
+.content p {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .main-content {
+        padding-left: 0;
+    }
+
+    .product {
+        width: 100%; /* Los productos se expanden al 100% de ancho en pantallas pequeñas */
+    }
+}

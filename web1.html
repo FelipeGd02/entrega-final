@@ -1,0 +1,46 @@
+<html>
+ <head>
+  <title>
+   Maná
+  </title>
+  <link rel="stylesheet" href="./estilos1.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="header">
+   <i class="fas fa-bars menu-icon"></i>
+   <div class="logo">
+    <a href="LandingPage.html">MANÁ</a>
+   </div>
+   <div>
+    <i class="fas fa-search search-icon"></i>
+   </div>
+  </div>
+  <div class="container">
+    <h2>Productos Favoritos</h2>
+    <div class="content"></div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      const container = document.querySelector(".content");
+      
+      if (favorites.length === 0) {
+        container.innerHTML = "<p>No tienes productos en favoritos.</p>";
+      } else {
+        favorites.forEach(product => {
+          const productDiv = document.createElement("div");
+          productDiv.classList.add("product");
+          productDiv.innerHTML = `
+            <a href="productDetail.html?id=${product.id}">
+              <img src="${product.image}" alt="${product.name}" width="200" height="200" />
+              <p>${product.name}<br/>$${product.price}</p>
+            </a>
+          `;
+          container.appendChild(productDiv);
+        });
+      }
+    });
+  </script>
+ </body>
+</html>
